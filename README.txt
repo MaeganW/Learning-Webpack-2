@@ -23,3 +23,15 @@ adding Babel requires 3 modules:
 npm install --save-dev babel-loader babel-core babel-preset-env
 
 add .babelrc file to root dir to instruct babel
+
+---- REFACTOR: From CommonJS with Node to ES2015 ----
+
+module.exports = sum;
+    changes to 
+export default sum;
+
+const sum = require('./sum');
+    changes to
+import sum from './sum';
+
+npm run build - code works the same
